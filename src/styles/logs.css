@@ -1,0 +1,30 @@
+#logs-container,
+#logs {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+#logs {
+  overflow-y: scroll;
+  max-height: 35vh;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.log {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  margin: 1rem;
+  padding: 0.5rem;
+}
