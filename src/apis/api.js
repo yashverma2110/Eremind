@@ -8,9 +8,10 @@ export const addReminder = (payload, cb) => {
     .post(`${BASE_URL}/add/reminder`, payload)
     .then((res) => {
       cb(res.data);
+      console.log(res);
     })
     .catch((err) => {
-      cb(err?.error);
+      cb({ error: err?.response?.data });
     });
 };
 
@@ -21,6 +22,6 @@ export const getReminder = (cb) => {
       cb(res.data);
     })
     .catch((err) => {
-      cb(err?.error);
+      cb({ error: err?.response?.data });
     });
 };

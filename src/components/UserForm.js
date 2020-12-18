@@ -33,7 +33,7 @@ export const UserForm = ({ setMsg, logsRefresh, setLogsRefresh }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     validate(formData);
-    const check = Object.keys(errors) === 0;
+    const check = Object.keys(errors).length === 0;
     if (check) {
       const origins = [formData.origin_lat, formData.origin_lon];
       const destination = [formData.destination_lat, formData.destination_lon];
@@ -45,7 +45,7 @@ export const UserForm = ({ setMsg, logsRefresh, setLogsRefresh }) => {
   };
 
   const apiCallback = (data) => {
-    if (data?.error) setMsg({ background: "red", msg: data.error });
+    if (data?.error) setMsg({ background: "red", msg: data.error.error });
     else
       setMsg({
         background: "green",
