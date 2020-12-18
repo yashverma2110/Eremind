@@ -8,7 +8,7 @@ export const Logs = ({ logsRefresh }) => {
 
   useEffect(() => {
     getReminder((data) => {
-      setLogs(data.reminders);
+      setLogs(data?.reminders);
     });
   }, [refersh, logsRefresh]);
 
